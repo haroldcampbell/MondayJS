@@ -1,0 +1,10 @@
+{
+    "name": "Monday.js",
+    "description": "Experimental Javascript MVC based entirely around effective use of closures",
+    "version": "0.0.0",
+    "homepage": "",
+    "license": "MIT",
+    "private": true,
+    "dependencies": {
+    }
+}
