@@ -1,4 +1,6 @@
-# Experimental Javascript MVC based entirely around effective use of closures
+# MondayJS
+
+### An experimental Javascript MVC based entirely around effective use of closures
 
 It started with a question. Is it possible to do the following in `javascript`?
 
