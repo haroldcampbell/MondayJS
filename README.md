@@ -1,6 +1,6 @@
 # MondayJS
 
-### An experimental Javascript MVC framework based entirely around effective use of closures
+#### An experimental Javascript MVC framework based entirely around the effective use of closures
 
 It started with a question. Is it possible to do the following in `javascript`?
 
@@ -25,7 +25,7 @@ The output printed in google Chrome browser console
 
 The answer it turns out is YES!
 
-### Motivation
+#### Motivation
 
 I like `AngularJS`, but I am sometimes frustrated by the amount of code that needs to
 be written to get going on a new project. I also want to write production code that just easy to read and understand.
@@ -33,10 +33,12 @@ Finally, I should be able to add `test annotations` that generate my tests.
 
 # Easy like MondayJS
 
-`Monday`, has only two constructs, controllers and services. That's it. `Services` provide data to the `controller`, and `Controller` interact
-with the `DOM`. This simple system allows you to use whatever type of 'drop-in' modules for your `models`.
+`Monday`, has only two constructs, controllers and services. That's it.
 
-## Using `MondayJS`
+`Services` provide data to the `controller`, and `Controller` interact with the `DOM`.
+This simple system allows you to use whatever type of 'drop-in' modules for your `models`.
+
+#### Using MondayJS
 
 We write our `Service`s like this in `MondayJS`.
 
@@ -59,16 +61,18 @@ We write our `Service`s like this in `MondayJS`.
 ```
 
 
-## External Framework Dependencies
+#### External Framework Dependencies
 
-MondayJS has no dependencies on any other frameworks! It's beautifully simple, and still very much an experimental work in progress.
+MondayJS has no dependencies on any other frameworks! It's beautifully simple,
+and still very much **an experimental work in progress**.
 
-## Work Ahead
+#### Work Ahead
 
 - simple data-binding
 - testing using meta-functions
 - routing
 - modules
+- templates??? not sure yet.
 
 # Feedback and Contribution
 
