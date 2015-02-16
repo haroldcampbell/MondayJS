@@ -5,6 +5,8 @@
 It started with a question. Is it possible to do the following in `javascript`?
 
 ```javascript
+
+    /* file: app.js */
     (function () {
         $asController("HelloWorld", this);
         $inject("GreetingsService", "WeatherService");
@@ -43,6 +45,7 @@ This simple system allows you to use whatever type of 'drop-in' modules for your
 We write our `Service`s like this in `MondayJS`.
 
 ```javascript
+     /* file: greet.service.js */
      (function () {
          $asService("GreetingsService", this);
 
@@ -51,6 +54,7 @@ We write our `Service`s like this in `MondayJS`.
          };
      })();
 
+     /* file: weather.service.js */
      (function () {
          $asService("WeatherService", this);
 
@@ -60,6 +64,24 @@ We write our `Service`s like this in `MondayJS`.
      })();
 ```
 
+Similarly, the associated html file:
+
+```html
+     <!DOCTYPE html>
+     <html>
+     <head lang="en">
+        <meta charset="UTF-8">
+        <title>Monday Demo</title>
+     </head>
+     <body>
+        See the Javascript Console!
+        <script src="lib/monday.js"></script>
+        <script src="app/js/greet.service.js"></script>
+        <script src="app/js/weather.service.js"></script>
+        <script src="app/js/app.js"></script>
+     </body>
+     </html>
+```
 
 #### External Framework Dependencies
 
