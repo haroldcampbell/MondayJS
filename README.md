@@ -102,4 +102,5 @@ I'd love to hear your feedback: [Harold Campbell](http://twitter.com/haroldcampb
 
 # Versions
 
+v0.1.0 - Changed API
 v0.0.1 - Is it possible?
