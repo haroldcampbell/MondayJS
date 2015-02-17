@@ -87,12 +87,15 @@ We write our `Service`s like this in `MondayJS`.
          };
      })();
 
+
      /* file: weather.service.js */
      (function () {
-         var service = $monday.service("WeatherService");
-         service.weatherForecast = function () {
-             $log("Today is going to be sunny!");
-         };
+        // Or more compactly!
+         $monday.service("WeatherService", function(){
+             this.weatherForecast = function () {
+                 $log("Today is going to be sunny!");
+             };
+         });
      })();
 ```
 
