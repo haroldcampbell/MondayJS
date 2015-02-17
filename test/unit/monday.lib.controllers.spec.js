@@ -1,6 +1,29 @@
 (function () {
     'use strict';
 
+    describe("MondayJS Empty Controller Context ", function () {
+        var controller, controllerContext;
+        var mockMessage = "[controller] message";
+
+        beforeEach(function () {
+            controller = $monday.controller("Thin");
+            controller.context.onLoad = function () {
+                this.message = mockMessage;
+            };
+            /* Allows us to reboot for each test. */
+            $monday.$$isMondayBooted = false;
+            $monday.boot();
+        });
+        it("should be create Controller", function () {
+            expect($monday.controllersByName["Thin"]).toBe(controller);
+            expect(controller.context.$meta).toBe(controller);
+            expect(controller.contexts.length).toBe(1);
+        });
+        it("should be able to access context property", function () {
+            expect(controller.context.message).toBe(mockMessage);
+        });
+    });
+
     describe("MondayJS Controllers", function () {
         var controller, controllerContext;
 

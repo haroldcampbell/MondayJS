@@ -6,7 +6,7 @@ module.exports = function(config){
         files : [
             'lib/monday.js'
             ,'test/unit/**/*.js'
-            ,'app/js/**/*.js'
+            //,'app/js/**/*.js'
         ],
 
         autoWatch : true,
