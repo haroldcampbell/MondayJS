@@ -4,9 +4,9 @@ module.exports = function(config){
         basePath : '../',
 
         files : [
-            'lib/monday.js',
-            'app/js/**/*.js',
-            'test/unit/**/*.js'
+            'lib/monday.js'
+            ,'test/unit/**/*.js'
+            //,'app/js/**/*.js'
         ],
 
         autoWatch : true,

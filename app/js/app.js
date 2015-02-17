@@ -1,7 +1,7 @@
 
 (function () {
-    $asController("HelloWorld", this);
-    $inject("GreetingsService", "WeatherService");
+    $monday.controller("HelloWorld", this);
+    $required("GreetingsService", "WeatherService");
     $options({template: "someUrl.html"});
 
     onLoad = function (greet, weather) {

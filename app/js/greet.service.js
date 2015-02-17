@@ -1,8 +1,7 @@
 
 (function () {
-    $asService("GreetingsService", this);
-
-    sayHi = function () {
+    var service = $monday.service("GreetingsService");
+    service.sayHi = function () {
         $log("Hey friend. Have a great week!");
     };
 })();
