@@ -137,5 +137,6 @@ I'd love to hear your feedback: [Harold Campbell](http://twitter.com/haroldcampb
 
 # Versions
 
+v0.2.x - Added default contexts, and inline functions for the services.
 v0.1.0 - Changed API
 v0.0.1 - Is it possible?
