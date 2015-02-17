@@ -6,7 +6,6 @@ It started with a question. Is it possible to do the following in `javascript`?
 
 ```javascript
 
-    /* file: app.js */
     (function () {
         $asController("HelloWorld", this);
         $inject("GreetingsService", "WeatherService");
@@ -26,6 +25,41 @@ The output printed in google Chrome browser console
 ![itworks](screenshots/v0.0.1/itworks.png)
 
 The answer it turns out is YES!
+
+This lead to the creation of **MondayJS**. With `MondayJS` the above would be written as follows:
+
+```javascript
+
+    /* file: app.js */
+    (function () {
+        $monday.controller("HelloWorld", this);
+
+        $required("GreetingsService", "WeatherService");
+        $options({template: "someUrl.html"});
+        onLoad = function (greet, weather) {
+            greet.sayHi();
+            weather.weatherForecast();
+
+            $log(template);
+        };
+    })();
+```
+
+Or if you chose to create the controller outside of a controller:
+
+```javascript
+
+    var controller = $monday.controller("HelloWorld");
+
+    controller.context = $required("GreetingsService", "WeatherService");
+    controller.context.$options({template: "someUrl.html"});
+    controller.context.onLoad = function (greet, weather) {
+        greet.sayHi();
+        weather.weatherForecast();
+
+        $log(template);
+    };
+```
 
 #### Motivation
 
@@ -47,18 +81,16 @@ We write our `Service`s like this in `MondayJS`.
 ```javascript
      /* file: greet.service.js */
      (function () {
-         $asService("GreetingsService", this);
-
-         sayHi = function () {
+         var service = $monday.service("GreetingsService");
+         service.sayHi = function () {
              $log("Hey friend. Have a great week!");
          };
      })();
 
      /* file: weather.service.js */
      (function () {
-         $asService("WeatherService", this);
-
-         weatherForecast = function () {
+         var service = $monday.service("WeatherService");
+         service.weatherForecast = function () {
              $log("Today is going to be sunny!");
          };
      })();
