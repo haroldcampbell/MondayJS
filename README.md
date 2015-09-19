@@ -45,7 +45,7 @@ This lead to the creation of **MondayJS**. With `MondayJS` the above would be wr
     })();
 ```
 
-Or if you chose to create the controller outside of a controller:
+Or if you chose to create the controller outside of a closure:
 
 ```javascript
 
@@ -87,12 +87,15 @@ We write our `Service`s like this in `MondayJS`.
          };
      })();
 
+
      /* file: weather.service.js */
      (function () {
-         var service = $monday.service("WeatherService");
-         service.weatherForecast = function () {
-             $log("Today is going to be sunny!");
-         };
+        // Or more compactly!
+         $monday.service("WeatherService", function(){
+             this.weatherForecast = function () {
+                 $log("Today is going to be sunny!");
+             };
+         });
      })();
 ```
 
@@ -134,5 +137,6 @@ I'd love to hear your feedback: [Harold Campbell](http://twitter.com/haroldcampb
 
 # Versions
 
+v0.2.x - Added default contexts, and inline functions for the services.
 v0.1.0 - Changed API
 v0.0.1 - Is it possible?
