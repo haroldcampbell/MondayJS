@@ -45,7 +45,7 @@ This lead to the creation of **MondayJS**. With `MondayJS` the above would be wr
     })();
 ```
 
-Or if you chose to create the controller outside of a controller:
+Or if you chose to create the controller outside of a closure:
 
 ```javascript
 
