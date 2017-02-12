@@ -26,7 +26,7 @@ The output printed in google Chrome browser console
 
 The answer it turns out is YES!
 
-This lead to the creation of **MondayJS**. With `MondayJS` the above would be written as follows:
+This led to the creation of **MondayJS**. With `MondayJS` the above would be written as follows:
 
 ```javascript
 
@@ -64,14 +64,14 @@ Or if you chose to create the controller outside of a closure:
 #### Motivation
 
 I like `AngularJS`, but I am sometimes frustrated by the amount of code that needs to
-be written to get going on a new project. I also want to write production code that just easy to read and understand.
+be written to get going on a new project. I also want to write production code that's just easy to read and understand.
 Finally, I should be able to add `test annotations` that generate my tests.
 
 # Easy like MondayJS
 
 `Monday`, has only two constructs, controllers and services. That's it.
 
-`Services` provide data to the `controller`, and `Controller` interact with the `DOM`.
+`Services` provide data to the `controller`, and `Controller` interacts with the `DOM`.
 This simple system allows you to use whatever type of 'drop-in' modules for your `models`.
 
 #### Using MondayJS
@@ -123,7 +123,7 @@ Similarly, the associated html file:
 MondayJS has no dependencies on any other frameworks! It's beautifully simple,
 and still very much **an experimental work in progress**.
 
-#### Work Ahead
+#### Future Work
 
 - simple data-binding
 - testing using meta-functions
@@ -133,10 +133,10 @@ and still very much **an experimental work in progress**.
 
 # Feedback and Contribution
 
-I'd love to hear your feedback: [Harold Campbell](http://twitter.com/haroldcampbell)
+I'd love to hear your feedback: [Harold Campbell](http://twitter.com/haroldcampbell) (twitter)
 
 # Versions
 
-v0.2.x - Added default contexts, and inline functions for the services.
-v0.1.0 - Changed API
-v0.0.1 - Is it possible?
+- v0.2.x - Added default contexts, and inline functions for the services.
+- v0.1.0 - Changed API
+- v0.0.1 - Is it possible?
